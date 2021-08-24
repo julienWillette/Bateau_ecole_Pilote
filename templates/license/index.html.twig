@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+{% block metadescription %}Retrouvez toutes nos formations permis bateaux{% endblock %}
+{% block title %}Nos formations{% endblock %}
+
+{% block body %}
+
+<h1 class="title-contact">Nos formations</h1>
+
+<div class="container container-licence">
+	<div class="row">
+		<div class="col-md-12">
+			{% for i in range(0, licenses|length -1) %}
+			{% if licenses[i].isActivated == 1 %}
+			{% if i is even %}
+			<div class="row license-row">
+				<div class="col-md-6">
+					<h2 class="license-h3 ">
+						{{licenses[i].name}}
+					</h2>
+					<dl>
+						<dt>
+							{{licenses[i].content|striptags}}
+						</dt>
+						<dd>
+							{{licenses[i].feature|striptags}}
+						</dd>
+					</dl>
+				</div>
+				<div class="col-md-6">
+					<div class="card license-card">
+						<img class="card-img-top" src="{{licenses[i].picture}}" alt="{{licenses[i].name}}">
+						<div class="card-body license-card-body">
+							{% for j in 0..licenses[i].examfeatures|length -1 %}
+							<h3 class="license-h4">
+								{{licenses[i].examFeatures[j].name}}
+							</h3>
+							<p>
+								{{licenses[i].examFeatures[j].content}}
+							</p>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			{% else %}
+			<div class="row license-row">
+				<div class="col-md-6">
+					<div class="card license-card">
+						<img class="card-img-top" src="{{licenses[i].picture}}" alt="{{licenses[i].name}}">
+						<div class="card-body license-card-body">
+							{% for j in 0..licenses[i].examfeatures|length -1 %}
+							<h3>
+								{{licenses[i].examFeatures[j].name}}
+							</h3>
+							<p>
+								{{licenses[i].examFeatures[j].content}}
+							</p>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<h2 class="license-h3">
+						{{licenses[i].name}}
+					</h2>
+					<dl>
+						<dt>
+							{{licenses[i].content|striptags}}
+						</dt>
+						<dd>
+							{{licenses[i].feature|striptags}}
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<hr>
+			{% endif %}
+			{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+</div>
+{% endblock %}

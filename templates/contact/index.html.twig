@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+{% block metadescription %}Contactez nous pour recevoir plus d'informations sur les permis bateaux{% endblock %}
+{% block title %}Nous contacter{% endblock %}
+
+{% block body %}
+<h1 class="title-contact">Contactez-nous</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 info-contact">
+            <h2 class="h2-contact">Nous contacter</h2>
+            <p class="message-contact">Contactez nous par téléphone, email ou bien avec le formulaire nous vous
+                recontacterons dans les plus
+                brefs délais</p>
+
+            <p class="contact-text"><img class="icon-contact" src="https://zupimages.net/up/21/01/efl8.png"
+                    alt="logo-phone"> <span class="space-contact">{{ info.infoFooter[0].phone}}</span> </p>
+            <p><img class="icon-contact" src="https://zupimages.net/up/21/01/68to.png" alt="logo-phone"> <span
+                    class="space-contact"> {{ info.infoFooter[0].mail}} </span></p>
+            <p><img class="icon-contact" src="https://zupimages.net/up/21/01/68to.png" alt="logo-phone">
+                <span class="addresse-contact">{{ info.infoFooter[0].address|striptags|raw}}</span>
+            </p>
+
+            <div class="divlogo-contact">
+                <img class="logo-contact-one" src="https://zupimages.net/up/21/04/j6z0.png" alt="logo"
+                    class="logo-contact">
+            </div>
+        </div>
+        <div class="col-md-8 contact-form">
+            {% if message == "Votre message a bien été envoyé !"%}
+            <div class="alert alert-primary" role="alert">
+                {{ message }}
+            </div>
+            {% endif %}
+
+            {{ form_start(form) }}
+            <div class="row">
+                <div class="col-md-6 lastmail-contact">
+                    {% if app.user %}
+                    {{ form_row(form.lastname, {'value': app.user.lastname }, {'attr': {'placeholder': "Votre nom"},
+                    'label': "Nom*",}) }}
+                    {{ form_row(form.email, {'value': app.user.email} ,{'attr':{'placeholder': " Votre Email"}, 'label':
+                    "Email*"}) }}
+                    {% else %}
+                    {{ form_row(form.lastname, {'attr': {'placeholder': "Votre nom"}, 'label': "Nom*",}) }}
+                    {{ form_row(form.email, {'attr':{'placeholder': " Votre Email"}, 'label': "Email*"}) }}
+                    {% endif %}
+                </div>
+                <div class="col-md-6 firstphone-contact">
+                    {% if app.user %}
+                    {{ form_row(form.firstname, {'value': app.user.firstname}, {'attr': {'placeholder': "Votre prénom"},
+                    'label': "Prénom*"}) }}
+                    {{ form_row(form.phone, {'value': app.user.phone}, {'attr':{'placeholder': " Votre Téléphone"},
+                    'label': "Téléphone*"}) }}
+                    {% else %}
+                    {{ form_row(form.firstname, {'attr': {'placeholder': "Votre prénom"}, 'label': "Prénom*"}) }}
+                    {{ form_row(form.phone, {'attr':{'placeholder': " Votre Téléphone"}, 'label': "Téléphone*"}) }}
+                    {% endif %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 content-contact">
+                    {{ form_row(form.content, {'attr':{'placeholder': " Contenu du message", 'rows': "5"}, 'label':
+                    "Contenu*"}) }}
+                    <div class="container-button-contact">
+                        <button type="submit" class="btn btn-success submit-contact">Envoyer</button>
+                    </div>
+                </div>
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+</div>
+<div style="height:150px"></div>
+{% endblock %}

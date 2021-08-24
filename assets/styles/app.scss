@@ -1,0 +1,1182 @@
+@import 'variables.scss';
+@import "~bootstrap/scss/bootstrap";
+@font-face {
+    font-family: "GhotamBold";
+    src: url("../font/GothamBold.ttf"),
+   }
+@font-face {
+    font-family: "GhotamRegular";
+    src: url("../font/GothamMedium.ttf"),
+   }
+@font-face {
+    font-family: "GhotamBook";
+    src: url("../font/GothamBook.ttf"),
+   }
+
+a:link{
+    text-decoration: none;
+
+}
+  
+.container-banner{
+    height: 600px;
+    background:fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.banner-text{
+    color: white;
+    text-align: center;
+    position: relative;
+    display: flex;
+    display:block;
+}
+
+.subtitle-banner{
+    font-family: 'Raleway' ;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.title-banner{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80px;
+    text-shadow: 0px 3px 6px #00000029;
+}
+
+.google-review{
+    contain: content;
+}
+
+.romw-outer-wrapper{
+    width: 20%;
+}
+
+.carousel-inner{
+    height: 400px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.carousel-item {
+    height: 600px;
+    text-align: center;
+    padding-top: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.title-caroussel{
+    color: #fff;
+    font-weight: bold;
+
+}
+
+.carousel-item-active{
+    height: 400px;
+    text-align: center;
+    padding-top: 30%;
+}
+
+.right-card{
+    width: 556px;
+    height: auto;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 20px;
+    opacity: 1;
+    margin-top:50px;
+    padding: 20px;
+    margin-left:auto ;
+    margin-right:auto ;
+    margin-left: 50px;
+}
+
+.sentence-right-card{
+    text-align: center;
+    font-size: 25px;
+    color:#3194AD;
+    font-weight: bold;
+}
+
+
+
+.left-card{
+    width: 556px;
+    height: 479px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 20px;
+    opacity: 1;
+    margin-top:50px;
+    padding: 20px;
+    margin-left:auto ;
+    margin-right:auto ;
+    margin-right: 50px;
+    overflow: scroll;
+}
+
+.img-confiance{
+    margin-top: 20px;
+}
+
+.title-rightcard{
+    color: #3194AD;
+    font-family: "GhotamBold";
+    font-size: 30px;
+    margin-top: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title-leftcard{
+    color: #2DC9A1;
+    font-family: "GhotamBold";
+    font-size: 30px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.card-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 198px;
+}
+
+.contain-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-form{
+    width: 100%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 20px;
+    opacity: 1;
+    margin-right: 40px;
+}
+
+.content-form{
+    margin-top: 20px;
+}
+
+.form-picture {
+    height: 247px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.title-formation{
+    color: #3194AD;
+    font-family: "GhotamRegular";
+}
+
+.formbtn{
+    display: flex;
+    width: 135px;
+    height: 44px;
+    background: #42CBED 0% 0% no-repeat padding-box;
+    border: 1px solid #3194AD;
+    border-radius: 25px;
+    opacity: 1;
+    color: white;
+    display: block;
+    margin: auto;
+    position: relative;
+    margin-bottom: 30px;
+    margin-top:60px ;
+}
+
+.formbtn:hover{
+    background: #37aac7 0% 0% no-repeat padding-box;
+}
+
+.container-icon{
+    display: block;
+    text-align: center;
+    margin-top: 125px;
+    margin-bottom: 25px;
+}
+
+.icon{
+    color: #3194AD;
+    font-size: 60px;
+}
+
+.icon-content{
+    font-family: "GhotamBold";
+    color: #2DC9A1;
+    margin-top: 80px;
+}
+
+// BLOG //
+
+.testimony-title {
+    color: #3194AD;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.license-card
+{
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 6px #00000029;
+border-radius: 20px;
+opacity: 1;
+}
+
+.license-card-body
+{
+    text-align: left;
+    letter-spacing: NaNpx;
+    opacity: 1;
+}
+
+.license-row
+{
+    margin-top: 15px;
+    padding: 20px;
+}
+
+.license-h3{
+    text-align: left;
+    font: normal normal bold 23px/25px Gotham;
+    letter-spacing: 0px;
+    color: #2DC9A1;
+    opacity: 1;
+}
+
+body {
+    background-color: white;
+    color: black;
+}
+
+h5 {
+    color: #3194AD;
+    font-weight: bold;
+}
+
+.blog-cards {
+    margin-bottom: 1%;
+}
+
+.card-deck {
+    display: flex;
+}
+
+.Faq_title{
+    text-align: center;
+    color: #2DC9A1;
+}
+
+.card-text {
+    overflow: hidden;
+    height: 70px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin-top: 20px;
+}
+
+//FAQ//
+
+.color_question{
+    font-weight: bold;
+    font-family: 'GhotamBold';
+}
+
+.case-color{
+    background-color: white;
+}
+
+.icon-faq{
+    color:black;
+    font-size: 2em;
+    outline: 0;
+}
+
+.color_answer{
+    color: black;
+    font-family: 'GhotamRegular';
+}
+.blog-video {
+    border-radius: 3px;
+}
+
+.read-more {
+    background-color: #42CBED;
+    border-radius: 20px;
+    color: white;
+    display: block;
+    margin: auto;
+
+}
+
+.read-more:hover{
+    background: #37aac7 0% 0% no-repeat padding-box;
+    color: #fff;
+}
+
+/* navbar-classic */
+
+.navbar{
+    z-index: 1;
+}
+
+.nav-cart{
+    background-color: white;
+    border-bottom: 0.5px solid #707070;
+}
+
+.nav-link{
+    color: black;
+    font-family:  'Raleway', sans-serif;
+    font-weight: bold;
+    box-shadow: none;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.logo-nav{
+    width: 15%;
+}
+
+.navbar-toggler-icon{
+    font-size: 60px;
+}
+/* navbar end */
+/* Burger-menue */
+/*
+=====
+DEPENDENCES
+=====
+*/
+
+/* The component will reset button browser styles */
+
+.r-button {
+  --uirButtonBackgroundColor: var(--rButtonBackgroundColor, transparent);
+  --uirButtonPadding: var(
+    --rButtonPadding,
+    var(--rButtonPaddingTop, 0) var(--rButtonPaddingRight, 0)
+      var(--rButtonPaddingBottom, 0) var(--rButtonPaddingLeft, 0)
+  );
+  --uirButtonBorderWidth: var(--rButtonBorderWidth, 0);
+  --uirButtonBorderStyle: var(--rButtonBorderStyle, solid);
+  --uirButtonBorderColor: var(--rButtonBorderColor, currentColor);
+  --uirButtonFontFamily: var(--rButtonFontFamily, inherit);
+  --uirButtonFontSize: var(--rButtonFontSize, inherit);
+  --uirButtonColor: var(--rButtonColor);
+
+  background-color: var(--uirButtonBackgroundColor);
+  padding: var(--uirButtonPadding);
+
+  border-width: var(--uirButtonBorderWidth);
+  border-style: var(--uirButtonBorderStyle);
+  border-color: var(--uirButtonBorderColor);
+
+  cursor: pointer;
+
+  font-family: var(--uirButtonFontFamily);
+  font-size: var(--uirButtonFontSize);
+}
+
+.r-button::-moz-focus-inner,
+.r-button[type="button"]::-moz-focus-inner,
+.r-button[type="reset"]::-moz-focus-inner,
+.r-button[type="submit"]::-moz-focus-inner {
+  /* Remove the inner border and padding in Firefox. */
+
+  border-style: none;
+  padding: 0;
+}
+
+/* The component will reset browser's styles of link */
+
+.r-link {
+  --uirLinkDisplay: var(--rLinkDisplay, inline-flex);
+  --uirLinkTextColor: var(--rLinkTextColor);
+  --uirLinkTextDecoration: var(--rLinkTextDecoration, none);
+
+  display: var(--uirLinkDisplay) !important;
+  color: var(--uirLinkTextColor) !important;
+  text-decoration: var(--uirLinkTextDecoration) !important;
+}
+
+/* The component will reset browser's styles of list */
+
+.r-list {
+  --uirListPaddingLeft: var(--rListPaddingLeft, 0);
+  --uirListMarginTop: var(--rListMarginTop, 0);
+  --uirListMarginBottom: var(--rListMarginBottom, 0);
+  --uirListListStyle: var(--rListListStyle, none);
+
+  padding-left: var(--uirListPaddingLeft) !important;
+  margin-top: var(--uirListMarginTop) !important;
+  margin-bottom: var(--uirListMarginBottom) !important;
+  list-style: var(--uirListListStyle) !important;
+}
+
+/* Basic styles of the hamburger component */
+
+.m-hamburger {
+  --uiHamburgerThickness: var(--hamburgerThickness, 4px);
+
+  display: var(--hamburgerDisplay, inline-flex);
+  width: var(--hamburgerWidth, 28px);
+  height: var(--hamburgerHeight, 20px);
+
+  position: relative;
+}
+
+.m-hamburger::before,
+.m-hamburger::after,
+.m-hamburger__label {
+  width: 100%;
+  height: var(--uiHamburgerThickness);
+  border-radius: var(--hamburgerBorderRadius, 5px);
+  background-color: var(--hamburgerBackgroundColor, currentColor);
+
+  position: absolute;
+  left: 0;
+}
+
+.m-hamburger::before,
+.m-hamburger::after {
+  content: "";
+}
+
+.m-hamburger::before {
+  top: 0;
+}
+
+.m-hamburger::after {
+  bottom: 0;
+}
+
+.m-hamburger__label {
+  /* The calculation of middle hamburger button line position */
+
+  top: calc(50% - calc(var(--uiHamburgerThickness) / 2));
+}
+
+/* helper to hide elements that are available only for screen readers. */
+
+.screen-reader {
+  width: var(--screenReaderWidth, 1px) !important;
+  height: var(--screenReaderHeight, 1px) !important;
+  padding: var(--screenReaderPadding, 0) !important;
+  border: var(--screenReaderBorder, none) !important;
+
+  position: var(--screenReaderPosition, absolute) !important;
+  clip: var(--screenReaderClip, rect(1px, 1px, 1px, 1px)) !important;
+  overflow: var(--screenReaderOverflow, hidden) !important;
+}
+
+/*
+=====
+MENU STYLES
+=====
+*/
+
+.menu {
+  --uiMenuCircleSize: var(--menuCircleSize, 6.25rem);
+  --uiMenuCircleOffset: var(--menuCircleOffset, 1rem);
+  --uiMenuCircleHeight: calc(var(--uiMenuCircleSize) / 2);
+  --uiMenuCircleBackgroundColor: var(--menuCircleBackgroundColor, currentColor);
+
+  --uiMenuHamburgerWidth: var(--menuHamburgerWidth, 1.75rem);
+  --uiMenuHamburgerHeight: var(--menuHamburgerHeight, 1.25rem);
+
+  --rButtonPaddingTop: calc(
+    var(--uiMenuCircleHeight) - var(--uiMenuHamburgerHeight) -
+      var(--uiMenuCircleOffset)
+  );
+
+  --hamburgerWidth: var(--uiMenuHamburgerWidth);
+  --hamburgerHeight: var(--uiMenuHamburgerHeight);
+  --hamburgerBackgroundColor: var(--menuHamburgerBackgroundColor, #fff);
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: var(--menuZindex, 9998);
+}
+
+.menu__nav {
+  box-sizing: border-box;
+  width: 100%;
+  height: 0;
+
+  transition: opacity 0.2s ease-out;
+  opacity: 0;
+
+  display: flex;
+  align-items: flex-end;
+  z-index: 2;
+}
+
+.menu__list {
+  width: 100%;
+  max-height: 100%;
+
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.menu__toggle {
+  box-sizing: border-box;
+  width: var(--uiMenuCircleSize);
+  height: var(--uiMenuCircleHeight);
+  flex: none;
+
+  position: relative;
+  z-index: 0;
+}
+
+.menu__toggle::before {
+  /*
+  1. The font-size property is used to simplify calculations of the element's sizes and position
+  2. The negative value for the bottom property need for hiding half of circle. 
+  */
+
+  content: "";
+  width: 1em;
+  height: 1em;
+  font-size: var(--uiMenuCircleSize); /* 1 */
+
+  background-color: var(--uiMenuCircleBackgroundColor);
+  border-radius: 50%;
+
+  position: absolute;
+  bottom: -0.5em; /* 2 */
+  left: calc(50% - 0.5em);
+  z-index: -1;
+
+  will-change: width, height;
+  transition: transform 0.25s cubic-bezier(0.04, -0.1, 0.29, 0.98),
+    width 0.25s cubic-bezier(0.04, -0.1, 0.29, 0.98),
+    height 0.25s cubic-bezier(0.04, -0.1, 0.29, 0.98);
+}
+
+/* styles of hamburger's animation */
+
+.m-hamburger::before,
+.m-hamburger::after,
+.m-hamburger__label {
+  transition-timing-function: ease;
+  transition-duration: 0.15s;
+}
+
+.m-hamburger::before,
+.m-hamburger::after {
+  transition-property: transform;
+}
+
+.m-hamburger__label {
+  transition-property: transform, opacity;
+}
+
+/*
+=====
+MENU STATES
+=====
+*/
+
+.menu__toggle:focus {
+  outline: var(--menuHaburgerOutlineOWidth, 2px) solid
+    var(--menuHaburgerOutlineColor);
+  outline-offset: var(--menuHaburgerOutlineOffset, 5px);
+}
+
+.menu_activated {
+  height: 100%;
+}
+
+.menu_activated .menu__nav {
+  flex-grow: 1;
+  opacity: 1;
+
+  will-change: opacity;
+  transition-duration: 0.2s;
+  transition-delay: 0.3s;
+}
+
+.menu_activated .menu__toggle::before {
+  width: 100vmax;
+  height: 100vmax;
+  transform: translate3d(-50vh, -50vh, 0) scale(5);
+  transition-duration: 1s;
+}
+
+.menu:not(.menu_activated) .menu__list {
+  display: none;
+}
+
+.menu_activated .m-hamburger::before {
+  top: 50%;
+  transform: translate3d(0, -50%, 0) rotate(45deg);
+}
+
+.menu_activated .m-hamburger::after {
+  transform: translate3d(0, -50%, 0) rotate(135deg);
+  top: 50%;
+}
+
+.menu_activated .m-hamburger__label {
+  transform: rotate(-45deg) translate3d(-0.285em, -0.3em, 0);
+  opacity: 0;
+}
+
+/*
+=====
+SETTINGS
+=====
+*/
+
+:root {
+  --colorWhite: #fff;
+  --colorMain: #3194AD;
+  --menuCircleBackgroundColor: var(--colorMain);
+  --menuHamburgerBackgroundColor: var(--colorWhite);
+  --menuHaburgerOutlineColor: var(--colorMain);
+}
+
+.menu_activated {
+  --menuHaburgerOutlineColor: var(--colorWhite);
+}
+
+/*
+=====
+DEMO
+=====
+*/
+
+
+.page {
+  max-width: 380px;
+  padding: 1rem;
+  margin: auto;
+  text-align: center;
+}
+
+.page__name {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.page__hint {
+  display: block;
+  line-height: 1.45;
+  margin-top: 1rem;
+}
+
+.menu__group {
+  --rLinkTextColor: var(--colorWhite);
+
+  padding: 0.5rem 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/*
+  Content
+*/
+div#content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 60px;
+  overflow: scroll;
+  background: #fcfeff;
+  border-radius: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-shadow: -3px 0 6px #4a5562;
+  -webkit-box-shadow: -3px 0 6px #4a5562;
+  box-shadow: -3px 0 6px #4a5562;
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+div#content div.menu-trigger {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 36px;
+  height: 36px;
+  background: #dfe5eb;
+  cursor: pointer;
+  border-radius: 5px;
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+div#content div.menu-trigger:before {
+  content: "\e801";
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  color: black;
+  font-family: "ico";
+  font-style: normal;
+  font-size: 1.2em;
+  font-weight: normal;
+  font-variant: normal;
+  text-align: center;
+  text-transform: none;
+  line-height: 36px;
+}
+div#content div.menu-trigger:hover {
+  background: #556270;
+}
+div#content div.menu-trigger:hover:before {
+  color: #fcfeff;
+}
+
+body.menu-active div#content {
+  left: 284px;
+  border-radius: 7px 0 0 7px;
+}
+
+body.menu-active div#content .menu-trigger {
+  left: 294px;
+}
+
+/* contact */
+
+.title-contact {
+    text-align:center;
+    color: $blue-dark;
+    font-weight: bold;
+    margin-bottom:2% ;
+    margin-top:2% ;
+    font-family:"GhotamBold" ;
+}
+
+.h2-contact{
+    font-size: 18px;
+    color: #2DC9A1;
+    font-weight: bold;
+}
+
+.space-contact{
+    color: #fff;
+    font-weight: bold;
+}
+.addresse-contact{
+    color: #fff;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.contact-text{
+    margin-top: 25%;
+}
+
+legend{
+    color: #9FA9AB;
+    font-size: 30px;
+    font-family: "GhotamBook";
+    font-weight: bold;
+}
+
+label{
+    color:#9FA9AB;
+    font-size: 20px;
+    font-family: "GhotamBook";
+}
+
+.card-form{
+    height: 550px;
+}
+
+.message-contact{
+    color: #fff;
+    font-style: italic;
+    font-size: 13px;
+}
+.icon-contact{
+    margin-left: 15px;
+}
+.contain-contact {
+    border-radius: 10px;
+    box-shadow: 15px 30px 80px #00000014;
+    padding: 2%;
+    margin-bottom: 3%;
+}
+
+
+.info-contact {
+    background-color: $blue-dark;
+    border-radius: 10px;
+    height: 600px;
+    padding-top: 3%;
+}
+
+.contact-form {
+    padding-left: 3%;
+}
+
+.lastmail-contact, .firstphone-contact {
+    padding: 3%;
+}
+
+.submit-contact {
+    float: right;
+    width: 197px;
+    height: 54px;
+    background-color: #3194AD;
+    border-radius: 20px;
+    border: none;
+    margin-top: 3%;
+    font-family: "GhotamBook" ;
+    font-size: 20px;
+}
+
+.submit-contact:hover {
+     background-color: #58abc0;
+}
+
+.divlogo-contact {
+    text-align: right;
+    width: 100%;
+    margin-top: 80px;
+}
+.logo-contact-one{
+    text-align: right;
+     width: 40%; 
+     margin-top: 20%;
+}
+
+.logo-contact {
+    width: 110%;
+}
+
+.contain-login {
+    padding-top: 70px;
+    box-shadow: 15px 30px 80px #00000014;
+    font: normal normal bold 14px/17px Roboto;
+    margin-bottom: 8%;
+}
+.info-login {
+    background-color: $blue-dark;
+    border-radius: 10px;
+    height: 720px;
+}
+
+.contain-login-button {
+    padding-top: 20%;
+}
+
+.up-login-button {
+    background-color: white;
+    text-align: center;
+    font: normal normal bold 17px/20px Roboto;
+    letter-spacing: 0px;
+    color: $blue-dark;
+    opacity: 1;
+    padding: 10px;
+    margin: 20px;
+    border-left: solid $blue-dark;
+}
+
+.down-login-button {
+    background-color: white;
+    text-align: center;
+    font: normal normal bold 17px/20px Roboto;
+    letter-spacing: 0px;
+    color: #D8D8D8;
+    opacity: 1;
+    padding: 10px;
+    margin: 20px;
+    border-left: solid #D8D8D8;
+}
+
+.title-register {
+    font-size: 1em;
+}
+
+.logo-login {
+    margin-top: 240px;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.submit-register {
+    float: right;
+    background-color: #3194AD;
+    width: 197px;
+    height: 54px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 8%;
+    margin-bottom: 15%;
+    color: #fff;
+    font-family: "GhotamBook";
+    font-size: 20px;
+}
+
+.submit-register:hover{
+    background-color: #58abc0;
+}
+
+.login-form {
+        display: grid;
+}
+
+.login-form div, .login-form h1, .login-form label {
+    margin-top: 40px;
+}
+
+.login-form h1 {
+    color: $blue-dark;
+    font-family: "GhotamBold";
+    font-size: 23px;
+}
+
+.remember{
+    font-size: 17px;
+}
+
+.mdp-1{
+    margin-bottom: 8%;
+    text-align: center;
+}
+
+.mdp-2{
+    color: #2DC9A1;
+    font-family:"GhotamBold" ;
+}
+
+.btn-login{
+    background-color: #3194AD;
+    border: none;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+    height: 47px;
+    font-size: 19px;
+    font-family: "GhotamBook";
+}
+
+.btn-login:hover{
+    background-color: #58abc0;
+}
+
+// Profil //
+.card-profil{
+    width: 600px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 20px;
+    opacity: 1;
+    margin-top:50px;
+    margin-bottom:50px;
+    padding: 20px;
+    margin-left:auto ;
+    margin-right:auto ;
+
+}
+
+.contain-right-profil{
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #707070;
+    border-radius: 15px;
+}
+
+.custom-file-label::before{
+    content: "choisir un fichier";
+}
+
+.custom-file-label::after{
+    content: "chercher";
+}
+// FOOTER //
+
+.footer{
+    background-color: #F1F8F9;
+}
+
+.logo-footer{
+    width: 65%;
+}
+
+.reseau-footer{
+    width: 10%;
+    text-align:center;
+    margin-left: 10px;
+}
+
+.container-fb{
+    text-align: center;
+}
+
+.contact-rond{
+    width: 20%;
+}
+
+.information-style{
+    color: #2DC9A1;
+    font-family: 'GhotamRegular';
+}
+
+.space{
+    margin-right: 10%;
+}
+
+.footer-information{
+    font-family: 'GhotamRegular';
+    color: #3194AD;
+}
+
+   @media screen and (max-width: 1000px) {
+
+        .navbar{
+            display: none;
+        }
+        .container-banner {
+            height: auto;
+        }
+
+        .title-banner {
+            font-size: 40px;
+        }
+        .subtitle-banner {
+            font-family: 'Raleway';
+            font-size: 12px;
+            margin-top: 0px;   
+        }
+
+        .right-card{
+            margin-left: 0;
+            margin-right: 0;
+            width: 90%;
+        }
+
+        .left-card{
+            margin-left: 0;
+            margin-right: 0;
+            width: 90%;
+        }
+
+        .card-form{
+            margin-right: 0;
+            margin-top:30px
+        }
+
+        .title-rightcard{
+            font-size: 16px;
+        }
+
+        .title-leftcard{
+            font-size: 20px;
+        }
+
+        .sentence-right-card{
+            font-size: 15px;
+            margin-top: 15px;
+        }
+
+        .card-row{
+            margin-top: 0;
+        }
+
+        .container-icon{
+            display:none;
+        }
+
+        .card-home-row{
+            margin-left: 0;
+            margin-right: 0;
+            justify-content: center;
+        }
+
+        .card-form{
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    }
+
+    @media screen and (max-width: 765px) {
+        .title-contact{
+            display: none;
+        }
+
+        .submit-contact{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .container-button-contact{
+            display: flex;
+        }
+
+        .info-login{
+            display:none
+        }
+
+        .content-right-card{
+            font-size: 10px;
+        }
+
+    }
+
+    @media screen and (min-width: 1000px) {
+        .menu{
+            display: none;
+        }
+        .blog-img-top{
+            height: 20em;
+        }
+
+    }
+
+
+ 
+// PASSWORD RENEWAL //
+
+.mailPwd {
+    margin-top: 7%;
+    width: 70%;
+    margin-bottom: 10%;
+}
+
+.pwdButton {
+    background-color: #3194AD;
+    border: #3194AD;
+    border-radius: 3px;
+}
+
+.mailTitle {
+    color: #3194AD;
+}
+
+
+@media screen and (max-width: 400px) {
+    @-ms-viewport {
+        width: device-width;
+    }
+}

@@ -1,0 +1,98 @@
+{% extends 'base.html.twig' %}
+{% block metadescription %}Bateau Ecole Pilote, spécialiste de la formation au permis bateau pour les particuliers en
+île-de-France.
+{% endblock %}
+{% block title %} | Accueil{% endblock %}
+
+{% block body %}
+<div class="container-fluid container-banner" style="background-image: url('{{home[0].video}}')">
+    <div class="row">
+        <div class="col-md-12 banner">
+            <div class="banner-text">
+                <h1 class="title-banner">Apprendre à naviguer</h1>
+                <h3 class="subtitle-banner">AVEC CONVIVIALITÉ</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid container-left-right">
+    <div class="row card-home-row">
+        <div class="left-card google-review">
+            <h2 class="title-leftcard">Ils nous on fait confiance !</h2>
+            <div data-romw-token="AtZsGkJ20DksKkPcqnMwJAV5B8rPSDYsIDOUmDJVNKA04Q1lQZ"></div>
+        </div>
+        <div class="right-card">
+            <h2 class="title-rightcard">{{home[0].title}}</h2>
+            <div class="content-right-card">{{home[0].content|raw}}</div>
+            <div class="sentence-right-card">{{home[0].quote|raw}}</div>
+        </div>
+    </div>
+</div>
+<div class="container contain-card">
+    <div class="row card-row">
+        <div class="col-lg-12 col-md-12 col-sm-12 my-3"></div>
+        {% for licence in licences %}
+        <div class="col-lg-4">
+            <div class="card-form card-home">
+                <img class="img-fluid form-picture" src="{{licence.picture}}" alt=" picture of {{ licence.name }}">
+                <div class="p-3 mt-2">
+                    <h3 class="title-formation">{{ licence.name }}</h3>
+                    <p class="card-text">{{ licence.content|striptags|u.truncate(200, ' ...')}}</p>
+                    <a href="{{ path('license_index') }}"><button class="formbtn">En savoir plus</button></a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+</div>
+<div class="container contain-picto">
+    <div class="row">
+        {% for icon in icons %}
+        <div class="col-md-4 container-icon">
+            <div class="iconfa"><i class="{{icon.fontAwesome}} icon"></i></div>
+            <div class="icon-content">
+                <h2>{{icon.name}}</h2>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<hr>
+<div class="container">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            {% for i in 0..blogs|length-2 %}
+            <li data-target="#carouselExampleIndicators" data-slide-to="{{i+1}}"></li>
+            {% endfor %}
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url({{blogs[0].pictures[0]}})">
+                <h3 class="title-caroussel">{{blogs[0].title}}</h3>
+            </div>
+            {% for i in 1..blogs|length-1 %}
+            <div class="carousel-item" style="background-image: url({{blogs[i].pictures[0]}})">
+                <a href="{{ "blog" }}"><h3 class="title-caroussel">{{blogs[i].title}}</h3></a>
+            </div>
+            {% endfor %}
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block javascripts %}
+<script src="https://reviewsonmywebsite.com/js/v2/embed.js?id=c338ae55b38e487f19ae" type="text/javascript"></script>
+{% endblock %}

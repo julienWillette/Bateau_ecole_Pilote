@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+{% block metadescription %}Connectez-vous à votre espace personnel{% endblock %}
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+<h1 class="d-none"> Connectez-vous </h1>
+<form method="post">
+    {% if error %}
+    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    {% if app.user %}
+    <div class="mb-3">
+        You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+    </div>
+    {% endif %}
+    <div class="container contain-login">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-2 contain-login-button">
+                        <a href="{{ path('app_login') }}">
+                            <div class="up-login-button">Connexion</div>
+                        </a>
+                        <a href="{{ path('app_register') }}">
+                            <div class="down-login-button">Inscription</div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 info-login">
+                        <img src="https://zupimages.net/up/21/04/j6z0.png" alt="logo" class="logo-login">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="container login-form">
+                            <h1> Connexion</h1>
+                            <label for="inputEmail">Email</label>
+                            <input type="email" value="{{ last_username }}" name="email" id="inputEmail"
+                                class="form-control" required autofocus>
+                            <label for="inputPassword">Mot de passe</label>
+                            <input type="password" name="password" id="inputPassword" class="form-control" required>
+                            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                            <div>
+                                <label class="lb-login">
+                                    <p class="remember"><input type="checkbox" name="_remember_me">
+                                        Se souvenir de mes informations</p>
+                                </label>
+                            </div>
+                            <div>
+                                <button class="btn btn-lg btn-primary btn-login" type="submit">Connexion</button>
+                            </div>
+                            <div class="mdp-1">
+                                <a class="mdp-2" href="{{ 'reset-password' }}">Mot de passe oublié</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+{% endblock %}

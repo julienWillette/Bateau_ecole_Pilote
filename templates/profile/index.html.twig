@@ -1,0 +1,226 @@
+{% extends 'base.html.twig' %}
+{% block metadescription %}Votre espace dédié. Vous pouvez envoyez tous documents administratifs nécessaires et modifier
+vos informations personnelles. {% endblock %}
+{% block body %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="card-profil">
+            <h1>Informations Personnelles</h1>
+            {{ form_start(profileForm) }}
+            {% if message == "Votre profil a bien été édité !"%}
+            <div class="alert alert-primary" role="alert">
+                {{ message }}
+            </div>
+            {% endif %}
+            <div class="row">
+                <div class="col-md-6">
+                    {{ form_row(profileForm.lastname, {'attr': {'placeholder': "Nom"}, 'label': "Nom"}) }}
+                </div>
+                <div class="col-md-6">
+                    {{ form_row(profileForm.firstname, {'attr': {'placeholder': "Prénom"}, 'label': "Prénom"})
+                    }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    {{ form_row(profileForm.email, {'attr': {'placeholder': "Email"}, 'label': "Email"}) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    {{ form_row(profileForm.address, {'attr': {'placeholder': "Adresse"}, 'label': "Adresse"})
+                    }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    {{ form_row(profileForm.zipCode, {'attr': {'placeholder': "Code postal"}, 'label': "Code
+                    postal"}) }}
+                </div>
+                <div class="col-md-6">
+                    {{ form_row(profileForm.phone, {'attr': {'placeholder': "Téléphone"}, 'label': "Téléphone"})}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-6">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-6">
+                    <button type="submit" class="submit-register">Editer votre profil</button>
+                </div>
+            </div>
+            {{ form_end(profileForm) }}
+        </div>
+
+        <div class="card-profil">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Documents à télécharger</h2>
+                    <p>Afin de pouvoir vous inscrire auprès de la D.R.I.E.A, vous devez nous fournir les documents
+                        suivants
+                        :
+                    </p>
+                    <ul>
+                        <li>
+                            1 photo d'identité
+                        </li>
+                        <li>
+                            1 photocopie recto/verso d'identité
+                        </li>
+                        <li>
+                            1 certificat médical cerfa 14673*01 datant de moins de 6 mois à télécharger <a
+                                href="https://timbres.impots.gouv.fr/pages/achat/choixSeries.jsp" target="_blank"
+                                rel="noopener noreferrer">lien</a>
+                        </li>
+                        <li>
+                            38€ de timbres fiscaux pour les droits à l'examen au format numérique (par permis)
+                        </li>
+                        <li>
+                            70€ de timbres fiscaux pour les droits de délivrance au format numérique
+                        </li>
+                        <li>
+                            original du ou des permis mers et/ou fluviaux déjà obtenus
+                        </li>
+                    </ul>
+                    <p>Timbres fiscaux : <a href="https://timbres.impots.gouv.fr/pages/achat/choixSeries.jsp"
+                            target="_blank" rel="noopener noreferrer">lien</a></p>
+                    <p>
+                        Cerfa : <a href="download/cerfa_14673-01.pdf" download>lien</a>
+
+                    </p>
+                </div>
+            </div>
+            <h2>Documents à envoyer</h2>
+            {% if uploadMessage == " Le document a bien été envoyé"%}
+            <div class="alert alert-primary" role="alert">
+                {{ uploadMessage }}
+            </div>
+            {% endif %}
+            {% if uploadMessage == "Le cerfa a bien été envoyé"%}
+            <div class="alert alert-primary" role="alert">
+                {{ uploadMessage }}
+            </div>
+            {% endif %}
+            {% if uploadMessage == "Le document d'identité a bien été envoyé"%}
+            <div class="alert alert-primary" role="alert">
+                {{ uploadMessage }}
+            </div>
+            {% endif %}
+            {% if uploadMessage == "La photo a bien été envoyée"%}
+            <div class="alert alert-primary" role="alert">
+                {{ uploadMessage }}
+            </div>
+            {% endif %}
+            {% if uploadMessage == "Le timbre fiscal de 70€ a bien été envoyé"%}
+            <div class="alert alert-primary" role="alert">
+                {{ uploadMessage }}
+            </div>
+            {% endif %}
+            {% if uploadMessage == "Le timbre fiscal de 38€ a bien été envoyé"%}
+            <div class="alert alert-primary" role="alert">
+                {{ uploadMessage }}
+            </div>
+            {% endif %}
+            {% if uploadMessage == "Le second timbre fiscal de 38€ a bien été envoyé"%}
+            <div class="alert alert-primary" role="alert">
+                {{ uploadMessage }}
+            </div>
+            {% endif %}
+            {{ form_start(cerfaForm) }}
+            {{ form_row(cerfaForm.cerfaFilename) }}
+            <p id="cerfa" class="my-2"></p>
+            <div class="col-md-6">
+                <button type="submit">envoyer</button>
+            </div>
+            {{ form_end(cerfaForm) }}
+
+            {{ form_start(identityForm) }}
+            {{ form_row(identityForm.identityFilename) }}
+            <p id="identity" class="my-2"></p>
+            <div class="col-md-6">
+                <button type="submit">envoyer</button>
+            </div>
+            {{ form_end(identityForm) }}
+
+            {{ form_start(identityPictureForm) }}
+            {{ form_row(identityPictureForm.identityPictureFilename) }}
+            <p id="identity_picture" class="my-2"></p>
+            <div class="col-md-6">
+                <button type="submit">envoyer</button>
+            </div>
+            {{ form_end(identityPictureForm) }}
+            {{ form_start(taxStampDeliveranceForm) }}
+            {{ form_row(taxStampDeliveranceForm.taxStampDeliverance)}}
+            <p id="stamp_deliverance" class="my-2"></p>
+            <div class="col-md-6">
+                <button type="submit">envoyer</button>
+            </div>
+            {{ form_end(taxStampDeliveranceForm) }}
+            {{ form_start(taxStampCoastalForm) }}
+            {{ form_row(taxStampCoastalForm.taxStampCoastal)}}
+            <p id="stamp_coastal" class="my-2"></p>
+            <div class="col-md-6">
+                <button type="submit">envoyer</button>
+            </div>
+            {{ form_end(taxStampCoastalForm) }}
+            {{ form_start(taxStampInnerWaterForm) }}
+            {{ form_row(taxStampInnerWaterForm.taxStampInnerWater)}}
+            <p id="stamp_inner_water" class="my-2"></p>
+            <div class="col-md-6">
+                <button type="submit">envoyer</button>
+            </div>
+            {{ form_end(taxStampInnerWaterForm) }}
+
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}
+
+{% block javascripts %}
+<script>
+    const inputCerfa = document.querySelector('#cerfa_cerfaFilename');
+    const cerfaName = document.getElementById('cerfa');
+    inputCerfa.addEventListener('change', e => {
+        cerfaName.textContent = e.target.files[0].name
+    })
+
+    const inputIdentity = document.querySelector('#identity_identityFilename');
+    const identityName = document.getElementById('identity');
+    inputIdentity.addEventListener('change', e => {
+        identityName.textContent = e.target.files[0].name
+    })
+
+    const inputIdentityPicture = document.querySelector('#identity_picture_identityPictureFilename');
+    const identityPictureName = document.getElementById('identity_picture');
+    inputIdentityPicture.addEventListener('change', e => {
+        identityPictureName.textContent = e.target.files[0].name
+    })
+
+    const inputStampDeliverance = document.querySelector('#tax_stamp_deliverance_taxStampDeliverance');
+    const stampDeliveranceName = document.getElementById('stamp_deliverance');
+    inputStampDeliverance.addEventListener('change', e => {
+        stampDeliveranceName.textContent = e.target.files[0].name
+    })
+
+    const inputStampCoastal = document.querySelector('#tax_stamp_coastal_taxStampCoastal');
+    const stampCoastalName = document.getElementById('stamp_coastal');
+    inputStampCoastal.addEventListener('change', e => {
+        stampCoastalName.textContent = e.target.files[0].name
+    })
+
+    const inputStampInnerWater = document.querySelector('#tax_stamp_inner_water_taxStampInnerWater');
+    const stampInnerWaterName = document.getElementById('stamp_inner_water');
+    inputStampInnerWater.addEventListener('change', e => {
+        stampInnerWaterName.textContent = e.target.files[0].name
+    })
+</script>
+{% endblock %}
