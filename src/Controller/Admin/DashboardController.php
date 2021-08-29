@@ -2,24 +2,18 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\Faq;
-use App\Entity\Blog;
-use App\Entity\Home;
-use App\Entity\Icon;
-use App\Entity\User;
-use App\Entity\Theme;
-use App\Entity\Contact;
-use App\Entity\License;
-use App\Entity\Document;
-use App\Entity\Advertise;
-use App\Entity\InfoContact;
+use App\Entity\{Faq, Blog, Home, User, Theme, Contact, License, InfoContact};
 use App\Controller\Admin\BlogCrudController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
-use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
+use EasyCorp\Bundle\EasyAdminBundle\Config\{MenuItem, Dashboard};
 use EasyCorp\Bundle\EasyAdminBundle\Router\CrudUrlGenerator;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
+
+/**
+ * @IsGranted("ROLE_ADMIN")
+ */
 
 class DashboardController extends AbstractDashboardController
 {

@@ -14,7 +14,14 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+
+/**
+ * @IsGranted("ROLE_USER")
+ * @Security("user.getIsActivated() === true")
+ */
 
 class ProfileController extends AbstractController
 {
@@ -27,9 +34,7 @@ class ProfileController extends AbstractController
         UploadManager $upload
     ): Response {
         $user = $this->getUser();
-        if (!$user) {
-            throw $this->createNotFoundException();
-        }
+        
         /**
          *  profileForm for editing profile
          */
